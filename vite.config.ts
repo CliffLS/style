@@ -6,4 +6,5 @@ export default defineConfig({
     main: resolve(import.meta.dirname, "index.html"),
     "guess-a-number": resolve(import.meta.dirname, "guess-a-number/index.html"),
   },
+  base: "/style/",
 });
