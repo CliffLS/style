@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess a Number</title>
+  </head>
+
+  <body>
+    <div id="guessing">
+      <h1>Choose a Number between 1 and 1000.</h1>
+      <p class="text">
+        Any integer including 1 and 1000 is allowed. After you start the game, I
+        will try to guess it. Let's see if I can guess it in less than 10 tries!
+      </p>
+      <button id="ready">I am ready, let's go!</button>
+      <p class="text" id="guess"></p>
+      <div id="inGame" style="display: none">
+        <button id="lower">No, my number is lower</button>
+        <button id="correct">Yes, that's it!</button>
+        <button id="higher">No, my number is higher</button>
+      </div>
+      <p id="gameOver" class="text"></p>
+      <button id="restart" style="display: none">Try again?</button>
+      <button id="change" style="display: none">Want to guess instead?</button>
+    </div>
+
+    <div id="answering" style="display: none">
+      <h1>I have chosen a Number between 1 and 1000.</h1>
+      <p class="text">
+        Any integer including 1 and 1000 is possible. Enter a number and I will
+        tell you if it is higher or lower. Try to get it in less than 10 tries!
+      </p>
+      <p class="text" id="aAnswer"></p>
+      <form action="" id="aNumberForm">
+        <input type="number" id="aInput" />
+        <button type="submit">Submit</button>
+        <p class="text" id="aMistake" style="display: none">
+          Not a valid input, please enter an integer between 1 and 1000!
+        </p>
+      </form>
+      <button id="aRestart" style="display: none">Try again?</button>
+      <button id="aChangeBack" style="display: none">
+        Want to guess instead?
+      </button>
+    </div>
+    <script type="module" src="./guess.ts"></script>
+    <script type="module" src="./answer.ts"></script>
+  </body>
+</html>
